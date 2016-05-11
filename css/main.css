@@ -49,29 +49,29 @@ body{
   height: 80px;*/
 }
 
-.nav-alice {
+.nav-galaxy {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
 }
 
-.nav-alice li {
+.nav-galaxy li {
   flex-grow: 1;
   text-align: center;
 }
 
-.nav-alice li a {
+.nav-galaxy li a {
   font-size: 1.2em;
   padding: 1em;
   color: #FFF;
 }
 
-.nav-alice li a:hover {
+.nav-galaxy li a:hover {
   color: #3A0748;
   background-color: #EDD82C;
 }
 
-.navbar-alice {
+.navbar-galaxy {
   font-family: PT Sans;
 /*  min-height: 76px;*/
   min-height: 70px;
@@ -91,7 +91,7 @@ body{
 .email-btn {
   width: 35%;
 }
-  .cat {
+  .cat {galaxyBlue
     width: 320px;
     height: 220px;
   }
@@ -127,13 +127,13 @@ body{
 
 }
 @media (max-width: 768px) {
-  .nav-alice {
+  .nav-galaxy {
     flex-direction: column;
   }
-  .nav-alice li {
+  .nav-galaxy li {
     border-bottom: 1px solid rgba(255,255,255,0.5);
   }
-  .nav-alice li:last-child {
+  .nav-galaxy li:last-child {
     border-bottom: 1px solid rgba(255,255,255,0);
   }
 
@@ -345,7 +345,7 @@ body{
 	width: 100%;
 }
 
-.block-turquoise {
+.block-galaxyBlue {
   background: #150721 url(../img/Background-GGJ.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -355,7 +355,7 @@ body{
   color: #FFFFFF;
 }
 
-.block-turquoise p a{
+.block-galaxyBlue p a{
   color: #fff9b2;
 }
 
