@@ -2,14 +2,24 @@ body {
     padding-top: 70px;
     background-color: #000000
 }
-#top_image_bg {
+#top_image_bg_DE {
     min-height: 751px;
-    background: #000000 url(../img/Headergrafik-GGJ.jpg);
+    background: #000000 url(../img/header_DE.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
 }
+
+#top_image_bg_EN {
+    min-height: 751px;
+    background: #000000 url(../img/header_EN.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
 #info {
     text-align: center;
     position: absolute;
@@ -122,6 +132,9 @@ body {
     color: #FFFFFF;
 }
 .block-blue_bg p a {
+    color: #fff9b2;
+}
+.block-blue_bg ul a {
     color: #fff9b2;
 }
 .rel {

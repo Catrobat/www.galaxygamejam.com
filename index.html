@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,7 +8,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-
     <link rel="icon" href="img/favicon.png">
 
     <title>Galaxy Game Jam</title>
@@ -17,10 +16,13 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href="css/index.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="build/css/countrySelect.min.css">
+    <link rel="stylesheet" href="build/css/demo.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -30,191 +32,89 @@
 </head>
 
 <body>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-galaxy navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="img/Logo-GGJ.png" /></a>
+    <div id="items">
+        <div><img src="img/logo.png"></div>
+        <br>
+        <span id="hash">#GalaxyGameJam</span>
+        <p id="date">6.6.-23.10.2016</p>
+        <br>
+        <br>
+        <h1>Country Select :</h1>
+        <form id="example-form">
+            <div class="form-item">
+                <input id="country_selector" type="text">
+                <!--<label for="country_selector" style="display:none;">Select a country here...</label>-->
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav nav-galaxy">
-                    <li><a class="scroll" href="#about">Überblick</a></li>
-                    <li><a class="scroll" href="#event">Event</a></li>
-                    <li><a class="scroll" href="#participate">Teilnahme</a></li>
-                    <li><a href="https://docs.google.com/forms/d/1XKNDDJC5arxsuA3QD93N21e2sPdvytvQUTgV1W-dVnY/viewform">Anmelden</a></li>
-                    <li><a href="mailto:contact@catrobat.org?subject=GalaxyGameJam">Kontakt</a></li>
-                </ul>
+            <div class="form-item" style="display:none;">
+                <input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1" readonly="readonly" placeholder="Selected country code will appear here" />
+                <label for="country_selector_code">...and the selected country code will be updated here</label>
             </div>
-    </nav>
-
-
-    <div id="top_image_bg">
-        <div id="info">
-            <span id="hash">#GalaxyGameJam</span>
-            <p>6.6.-23.10.2016</p>
+            <br>
+            <img src="img/landing/landing_button.png" onmouseover="this.style.cursor='pointer'" width="200px" onClick="selectMain();">
+        </form>
         </div>
-    </div>
+        <!-- Load jQuery from CDN so can run demo immediately -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="build/js/countrySelect.min.js"></script>
+        <script>
+            $("#country_selector").countrySelect({
+                //defaultCountry: "jp",
+                //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                preferredCountries: ['at', 'gb', 'in']
+            });
 
-    <div class="block block-blue_bg">
-        <div class="container">
-            <!-- Main component for a primary marketing message or call to action -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h1><a id="about">ÜBERBLICK</a></h1>
-                </div>
-                <div class="col-md-4">
-                    <h2>#GalaxyGameJam</h2>
-                    <p>Schnapp dir dein Smartphone und erkunde mit uns die Weiten der Galaxis. Beim #GalaxyGameJam von <b>6.6. - 23.10 2016</b> hast du die Möglichkeit mit Pocket Code deine eigene App zu erstellen und somit Teil unserer Weltraummission zu
-                        werden. Die besten Astronauten werden von Samsung mit tollen Preisen belohnt.</p>
-                </div>
-                <div class="col-md-4">
-                    <h2>Unsere Weltraummission</h2>
-                    <p>In Kooperation mit Samsung haben wir beschlossen, dieses Jahr einen Ausflug ins Weltall zu wagen. Doch dafür benötigen wir deine Hilfe! Der #GalaxyGameJam lädt dich und deine Freunde ein, Astronauten auf unserem Spaceshuttle zu werden.
-                        Erstelle Handy Spiele, Animationen und andere Apps mit Pocket Code und erlebe die Mysterien weit entfernter Galaxien hautnah auf deinem Smartphone.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="intext_logo">
-                      <img src="img/pc-headline.png"></img>
-                    </div>
-                    <p>Mit Pocket Code wollen wir Jugendliche inspirieren, ihre eigenen Spiele und interaktiven Geschichten direkt am Smartphone zu erstellen. Durch intuitives, “Lego”-artiges programmieren benötigt man kein Vorwissen.</p>
-                    <h3>Pocket Code ist kostenlos erhältlich auf</h3>
-                    <div class="play-btn">
-                        <a target="_blank" href="http://catrob.at/pc"><img src="img/GooglePlay.png" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /container -->
-    </div>
-
-    <div class="block block-blue_bg">
-        <div class="container">
-            <!-- Main component for a primary marketing message or call to action -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h1><a id="event">EVENT</a></h1>
-                </div>
-                <div class="col-md-4">
-                    <h2>Details</h2>
-                    <p>Dieser Game Jam wird in Kooperation mit Samsung durchgeführt und findet im Rahmen der Roadshow <a target="_blank" href="http://www.samsung.com/at/microsite/digitale-bildung/coding-for-kids.html">“Digitales Klassenzimmer”</a> statt.
-                        Programme können ab dem 6. Juni bis zum Ende der European Code Week am 23.10.2016 eingereicht werden. Alle wichtigen Informationen zur Teilnahme findest du auf dieser Seite.</p>
-                    <h2>Thema</h2>
-                    <p>Alles dreht sich um unsere Mission im Weltall! Erstelle dein eigenes Handy-Spiel oder eine Geschichte über weit entfernte Galaxien. Vergiss nicht die farbenprächtigen Charaktere [Tick, Trick und Track] mit auf deine Reise zu nehmen.
-                        Ein Überraschungsthema, das unbedingt in deinem Programm vorkommen sollte, werden wir kurz vor dem Beginn des Jams bekanntgeben.</p>
-
-                    <h2>Überraschungsthema</h2>
-                    <p>Um es etwas spannender zu machen, soll sich dein Beitrag zusätzlich mit dem Überraschungsthema beschäftigen. Dieses wird am <b>6. Juni</b> hier, sowie auf unseren Social Media Kanälen [<a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/">Facebook</a>,
-                        <a target="_blank" href="https://plus.google.com/communities/116816272940643231129">Google+</a>, <a target="_blank" href="https://twitter.com/pocket_code">Twitter</a>] veröffentlicht.</p>
-
-                </div>
-                <div class="col-md-4">
-
-                    <h2>Wer kann Teil unserer Weltraummission werden?</h2>
-                    <p>Je nach Alter kannst du als Einzelperson oder im Team mit bis zu 4 Gleichgesinnten in einer der Altersgruppen (bis 12 Jahre, 13-17 Jahre, ab 18 Jahre+) teilnehmen. Für Teams gilt das Alter des ältesten Mitgliedes. Wenn du zusammen
-                        mit deiner Schulklasse antreten willst, könnt ihr mehrere Programme in unserer Kategorie “Schulklasse” einreichen.</p>
-                    <h2>Wie kann ich an der Weltraummission teilnehmen?</h2>
-                    <p>Informationen zur Anmeldung findest du weiter unten auf dieser Seite unter <a class="scroll" href="#participate">"Teilnahme"</a>.</p>
-
-                </div>
-                <div class="col-md-4 decor">
-
-                    <h2>Was gibt es zu gewinnen?</h2>
-                    <p>Mit der Unterstützung von Samsung ist es uns möglich, ausgewählte Astronauten mit tollen Preisen auszustatten. Erstelle ein eigenes Programm zu unserer Weltraummission und lade es auf pocketcode.org hoch! Nutze die Chance, Gewinner
-                        eines neuen Computers, Tablets, Smartphones oder anderer großartiger Preise zu werden.</p>
-                    <div class="decor">
-                        <a href="http://www.pocketcode.org" target="blank_"><img src="img/device-GGJ.png"></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /container -->
-    </div>
+            var countryData = $("#country").countrySelect("getSelectedCountryData");
 
 
-    <div class="block block-blue_bg">
-        <div class="container rel">
-            <!-- Main component for a primary marketing message or call to action -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h1><a id="participate">TEILNAHME</a></h1>
-                </div>
-                <div class="col-md-4">
-                    <h2>Wie kannst du teilnehmen?</h2>
-                    <p>Entscheide, ob du alleine oder im Team arbeiten möchtest. Wenn du mit deiner ganzen Klasse teilnehmen möchtest, informiere deinen Leherer oder deine Lehrerin. Vergiss nicht auf das Überraschungsthema, das am <b>6. Juni 2016</b> veröffentlicht
-                        wird. Folge den beschriebenen “Ersten Schritten und Regeln” und beginne deine eigene App mit der Pocket Code App zu erstellen.</p>
-                    <h2>Wie lerne ich zu programmieren?</h2>
-                    <p>Auch wenn du noch gar keine Programmiererfahrung hast brauchst du keine Angst zu haben. Es ist einfacher als du denkst! In der Pocket Code App findest du unter “Hilfe” eine Tutorialübersicht, in der wir dir ein paar großartige Beispiele
-                        für Anfänger zur Verfügung gestellt haben. Hinter Pocket Code steht außerdem eine sehr große Community, die dir eine Vielzahl an Beispielen im Web zur Verfügung stellt. Du findest diese in der Pocket Code App unter “Erkunden”.</p>
-                    <h2>Finde die richtigen Zutaten für dein Spiel</h2>
-                    <p>Um es dir leichter zu machen, stellen wir dir ein paar spezielle Grafiken zur Verfügung die du während des Game Jams gerne verwenden kannst. Um mehr über diese freien Grafiken zu erfahren, lies dir bitte unsere Häufig gestellten Fragen
-                        (FAQs) durch.</p>
-                </div>
-                <div class="col-md-4">
-                    <h2>Erste Schritte und Regeln</h2>
-                    <ul>
-                        <p>
-                            <li>Wenn du als Einzelperson teilnimmst, kannst du diesen Punkt überspringen. Arbeitet ihr im Team, dann überlegt euch bitte einen Teamnamen. Wollt ihr als ganze Klasse teilnehmen, dann informiert euren Lehrer oder eure Lehrerin
-                                über euer Vorhaben und bittet ihn oder sie das Anmeldeformular auszufüllen.</li>
-                        </p>
-                        <p>
-                            <li>Schau dir zuerst die von uns in der Mediensammlung zur Verfügung gestellten Bilder an. Sie deinen dazu dein Programm etwas bunter zu machen und dir Ideen für ein tolles Spiel zu geben. Du kannst selbstverständlich auch andere
-                                Grafiken verwenden, jedoch solltest du hierbei das Urheberrecht beachten.</li>
-                        </p>
-                        <p>
-                            <li>Da sich das Programm sich rund um das Thema Weltall und weit entfernte Galaxien drehen soll, überlege dir zuerst welche Art von App (Spiel, Animation, usw.) du erstellen willst und wie es funktionieren soll. Ein paar Ideen
-                                solltest du ja bereits haben, nachdem du unsere Mediensammlung mit den Bildern durchstöbert hast.</li>
-                        </p>
-                        <p>
-                            <li>Überlege dir, wie du das Überraschungsthema in dein Programm einbauen kannst. Das Überraschungsthema ist ein absolutes Muss für jeden Teilnehmer.</li>
-                        </p>
+            function selectMain() {
+                var selected_country_code = document.getElementById("country_selector_code").value;
+                setCookie("countryCode", selected_country_code, 365);
+                if (selected_country_code == 'at' || selected_country_code == 'de') window.open("main_de.html", "_self");
+                else window.open("main_en.html", "_self");
+            }
 
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    </br>
-                    </br>
-                    </br>
-                    <p>
-                        <li>
-                            <p>Füge folgende Funktionalitäten zu deiner App hinzu (außer manche Dinge treffen auf deine App nicht zu, weil sie zum Beispiel kein Spiel ist):</p>
-                            <br> &#9733; <b>Einen Willkommensbildschirm</b>
-                            <br> &#9733; <b>Eine kurze Erklärung</b>
-                            <br> &#9733; <b>Einen Game-Over Bildschirm</b>
-                            <br> &#9733; <b>Einen Gewonnen-Bildschirm</b>
-                            <br> &#9733; <b>Zumindest einen Sensor verwenden</b>
-                            <br> &#9733; <b>Zumindest 2 Levels</b>
-                            <br> &#9733; <b>Kollisionserkennung</b>
-                            <br> &#9733; <b>Eine Fremdsprache (NÖTIG?)</b>
-                        </li>
-                    </p>
-                    <h2>Ein Spiel einreichen</h2>
-                    <p>Nachdem du deine App fertiggestellt hast, gib eine Beschreibung dazu in der du uns erklärst worum es geht. Bitte füge auch den Hashtag #GalaxyGameJam hinzu. Wenn ihr im Team arbeitet, muss auch euer Teamname als Hashtag hinzugefügt
-                        werden (zB #EuerTeamname). Lade dann dein oder euer Spiel hoch. Du kannst deine App beliebig oft verbessern und einfach mit dem gleichen Namen nochmals hochladen.</p>
-                    <p>Falls du noch nicht angemeldet bist, melde dich auf <a href="http://www.pocketcode.org/">pocketcode.org</a> an und öffne die Seite deines Programms das du einreichen möchtet.</p>
-                    <p>Während dieses Events haben wir einen eigenen Button zum Einreichen hinzugefügt. Drücke diesen Button und schon ist dein Programm abgegeben.</p>
-                    <p>Bevor dein Spiel auf der Wall of Fame aufscheint, musst du noch den Fragebogen ausfüllen. Dieser ist Teil der Abgabe und verpflichtend auszufüllen.</p>
-                </div>
-            </div>
+            function selectMainViaCookie(selected_country_code) {
+                if (selected_country_code == 'at' || selected_country_code == 'de') window.open("main_de.html", "_self");
+                else window.open("main_en.html", "_self");
+            }
 
-        </div>
-        <!-- /container -->
-    </div>
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + "; " + expires;
+            }
 
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            function checkCookie() {
+                var countryCode = getCookie("countryCode");
+                if (countryCode != "") {
+                    selectMainViaCookie(countryCode);
+                }
+            }
+            //Main
+            //checkCookie();
+        </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-
-
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
     <script>
