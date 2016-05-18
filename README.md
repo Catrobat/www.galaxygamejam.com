@@ -1,3 +1,3 @@
-#Direkt Link zur Delilovic's GalaxyGameJam Webseite (Testing):
+#Link to GalaxyGameJam Webseite:
 
-http://delilovic.github.io/www.galaxygamejam.com/index.html
+http://www.galaxygamejam.com/

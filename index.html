@@ -60,7 +60,7 @@
             $("#country_selector").countrySelect({
                 //defaultCountry: "jp",
                 //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-                preferredCountries: ['at', 'gb', 'in']
+                preferredCountries: ['at']
             });
 
             var countryData = $("#country").countrySelect("getSelectedCountryData");
@@ -69,12 +69,12 @@
             function selectMain() {
                 var selected_country_code = document.getElementById("country_selector_code").value;
                 setCookie("countryCode", selected_country_code, 365);
-                if (selected_country_code == 'at' || selected_country_code == 'de') window.open("main_de.html", "_self");
+                if (selected_country_code == 'at') window.open("main_at.html", "_self");
                 else window.open("main_en.html", "_self");
             }
 
             function selectMainViaCookie(selected_country_code) {
-                if (selected_country_code == 'at' || selected_country_code == 'de') window.open("main_de.html", "_self");
+                if (selected_country_code == 'at') window.open("main_at.html", "_self");
                 else window.open("main_en.html", "_self");
             }
 
