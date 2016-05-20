@@ -26,10 +26,10 @@ $(".scroll").click(function(event){
      $('html,body').animate({scrollTop:(dest - 100)}, 1000,'swing');
 });
 
-$('.nav-alice').find('a').click(function(event){
+$('.nav-galaxy').find('a').click(function(event){
 	var visibility = $('.navbar-toggle').css('display');
 	console.log("visibility" + visibility);
-	//$('.nav-alice').collapse('hide');
+	//$('.nav-galaxy').collapse('hide');
 	if(!(visibility.localeCompare('none') == 0)) {
 		$('.navbar-toggle').click();
 	}
