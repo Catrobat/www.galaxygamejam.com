@@ -12,7 +12,7 @@ body {
 }
 
 #top_image_bg_EN {
-    min-height: 751px;
+    min-height: 900px;
     background: #000000 url(../img/header_EN.jpg);
     background-size: cover;
     background-repeat: no-repeat;
