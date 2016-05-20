@@ -3,7 +3,7 @@ body {
     background-color: #000000
 }
 #top_image_bg_DE {
-    min-height: 751px;
+    min-height: 900px;
     background: #000000 url(../img/header_DE.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ body {
 #info {
     text-align: center;
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     display: block;
     color: white;
     font-size: 35pt;
