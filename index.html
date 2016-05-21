@@ -35,17 +35,39 @@
 
 <body>
      <script type="text/javascript">
-     var countrycode = geoplugin_countryCode();
-     if(countrycode == "AT"){
-	window.location = "http://www.galaxygamejam.com/main_at.html";
-     }
+     switch (geoplugin_countryCode()) {
+       case "AT":  
+	 window.location = "http://www.galaxygamejam.com/main_at.html";
+	 break;
+       case	"UK":
+	 window.location = "http://www.galaxygamejam.com/main_en.html";
+	 break;
+       case	"US":
+	 window.location = "http://www.galaxygamejam.com/main_en.html";
+	 break;
+       case	"IN":
+	 window.location = "http://www.galaxygamejam.com/main_en.html";
+	 break;
+       case	"JP":
+	 window.location = "http://www.galaxygamejam.com/main_en.html";
+	 break;
+       case	"KR":
+	 window.location = "http://www.galaxygamejam.com/main_en.html";
+	 break;
+       case	"DE":
+	 window.location = "http://www.galaxygamejam.com/main_en.html";
+	 break;
+       case	"ES":
+	 window.location = "http://www.galaxygamejam.com/main_en.html";
+	 break;    
+    } 
     </script>
      
     <div id="items">
         <div><img src="img/logo.png"></div>
         <br>
         <span id="hash">#GalaxyGameJam</span>
-        <p id="date">June 6th -October 23rd 2016</p>
+        <p id="date">June 6th - October 23rd 2016</p>
         <br>
         <br>
         <h1>Country Select :</h1>
