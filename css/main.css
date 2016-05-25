@@ -1,6 +1,6 @@
 body {
     padding-top: 70px;
-    background-color: #000000;
+    background-color: #1B052C;
 }
 #top_image_bg_DE {
 	width:100%;
@@ -25,6 +25,28 @@ body {
 #header-image{
   width: 100%;
 }
+
+footer {
+	width: 100%;
+	background: #1B052C;
+	vertical-align: bottom;
+	padding: 0.5em;
+	color: #ffffff;
+}
+
+footer a {
+	color: #ffffff;
+}
+
+.footer_social {
+	margin-right: 0.5em;
+	display: inline;
+}
+.footer_social .social{
+	height: 25px;
+	width: 25px;
+}
+
 
 #info {
     text-align: center;
@@ -172,6 +194,60 @@ body {
     line-height: 80px;
     vertical-align: middle;
 }
+
+.social {
+	height: 50px;
+	width: 50px;
+	margin: 0.2em;
+}
+
+#hidden_suscribe {
+  width: 100%;
+  display: none;
+  margin-top: 1em;
+  text-align: center;
+  color: #FFDF31;
+  font-weight: 900;
+  text-align: center;
+  font-family: PT Sans;
+  border-top-style: solid;
+  border-color: #FFFFFF;
+  border-width: 1px;
+}
+
+#hidden_subs-form {
+  margin: 1em auto auto auto;
+  font-family: Bitter;  
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+#hidden_subs-form input[type=email]{
+  font-weight: lighter;
+  width: 50%;
+  min-width: 300px;
+  margin: auto;
+}
+
+#hidden_subs-form input[type=submit] {
+  height: 2em;
+  margin: 1em;
+}
+
+#hidden_close a{
+  color: #FFFFFF;
+}
+
+#hidden_subs-title {
+  color: #FFDF31;
+  font-size: 1.6em;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 1em;
+  font-family: PT Sans;
+  text-decoration: none;
+}
+
 
 @media only screen and (max-width: 767px) {
     .nav-galaxy {
