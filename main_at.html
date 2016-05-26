@@ -26,6 +26,17 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	<script>
+		function displaySuscribe(){
+			if(document.getElementById('hidden_suscribe').style.display=='block') {
+				document.getElementById('hidden_suscribe').style.display='none';
+			}else{
+				document.getElementById('hidden_suscribe').style.display='block';
+			}
+		}
+	</script>
+	
 </head>
 
 <body>
@@ -46,10 +57,29 @@
                     <li><a class="scroll" href="#about">Überblick</a></li>
                     <li><a class="scroll" href="#event">Event</a></li>
                     <li><a class="scroll" href="#participate">Teilnehmen</a></li>
-                    <li><a href="https://docs.google.com/forms/d/1XKNDDJC5arxsuA3QD93N21e2sPdvytvQUTgV1W-dVnY/viewform">Gruppenanmeldung</a></li>
-                    <li><a href="mailto:contact@catrobat.org?subject=GalaxyGameJam">Kontakt</a></li>
+                    <li><a href="groups_at.html">Gruppenanmeldung</a></li>
+                    <li><a href="javascript:void(0)" onClick="displaySuscribe();">Newsletter</a></li>
                 </ul>
             </div>
+		<div id="hidden_suscribe">
+        <div id="hidden_subs-title">Abonniere den Pocket Code Newsletter</div>
+
+        <div id="hidden_subs-form">
+            <form action="//catrobat.us11.list-manage.com/subscribe/post?u=5b5a960a1f0b53cf06ac2b5a2&amp;id=ce7367db20"  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <input type="email" value="" name="EMAIL" class="required form-control email InputEmail" id="mce-EMAIL" placeholder="Gib hier deine E-Mailadresse ein">
+                    <input type="submit" value="Abschicken" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default email-btn">
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            </form>
+        </div>
+        <p>
+        <div id="hidden_close">
+            <a href="javascript:void(0)" onClick="displaySuscribe();">[X]</a>
+        </div>
+        </p>
+      </div>
     </nav>
 
 
@@ -108,11 +138,9 @@
                         Programme können ab dem 6. Juni bis zum Ende der European Code Week am 23. Oktober 2016 eingereicht werden. Alle wichtigen Informationen zur Teilnahme findest du auf dieser Seite.</p>
                     <h2>Thema</h2>
                     <p>Alles dreht sich um unsere Mission ins Weltall! Erstelle dein eigenes Spiel oder eine Geschichte über weit entfernte Galaxien. Vergiss nicht die farbenprächtigen Charaktere [Tick, Trick und Track] mit auf deine Reise zu nehmen.</p>
-
-                    <h2 id="supprise-topic">Soziale Medien</h2>
-                    <p>Folge uns jetzt auf unseren Social Media Kanälen [<a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/">Facebook</a>,
-                        <a target="_blank" href="https://plus.google.com/communities/116816272940643231129">Google+</a>, <a target="_blank" href="https://twitter.com/pocket_code">Twitter</a>] und bleibe am neuesten Stand.</p>
-
+                    <h2 id="social-media">Soziale Medien</h2>
+                    <p>Folge uns jetzt auf unseren Social Media Kanälen und bleibe am neuesten Stand.</p>
+                    <p><a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="img/social/facebook.png" class="social"></a><a target="_blank" href="https://twitter.com/pocket_code"><img src="img/social/twitter.png" class="social"></a><a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="img/social/google.png" class="social"></a></p>
                 </div>
                 <div class="col-md-4">
 
@@ -202,6 +230,19 @@
         </div>
         <!-- /container -->
     </div>
+	
+	 <footer>
+		 <div class="container">
+		 <div class="footer_social">
+         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="img/social/facebook.png" class="social"></a>
+		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="img/social/twitter.png" class="social"></a>
+		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="img/social/google.png" class="social"></a>
+		 </div>
+		 <a href="imprint_at.html">Impressum</a> | 
+		 <a href="contact_at.html">Kontakt</a> | 
+		 <a target="_blank" href="http://www.catrobat.org/">©&nbsp;2016 Catrobat</a>
+		 </div>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -225,7 +266,7 @@
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-42270417-6', 'auto');
+        ga('create', 'UA-42270417-9', 'auto');
         ga('send', 'pageview');
     </script>
 </body>
