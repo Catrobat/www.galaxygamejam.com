@@ -51,7 +51,7 @@ footer a {
 #info {
     text-align: center;
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     display: block;
     color: white;
     font-size: 35pt;
@@ -217,7 +217,7 @@ footer a {
 
 #hidden_subs-form {
   margin: 1em auto auto auto;
-  font-family: Bitter;  
+  font-family: Bitter;
   font-size: 1em;
   font-weight: lighter;
 }
