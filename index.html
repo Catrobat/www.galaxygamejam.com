@@ -39,6 +39,9 @@
        case "AT":
 	 window.location = "http://www.galaxygamejam.com/main_at.html";
 	 break;
+       case "DE":
+	 window.location = "http://www.galaxygamejam.com/main_en.html";
+	 break;
        case	"UK":
 	 window.location = "http://www.galaxygamejam.com/main_en.html";
 	 break;
@@ -64,7 +67,7 @@
         <div id ="logo"><img src="img/logo.png"></div>
         <br>
         <span id="hash">#GalaxyGameJam</span>
-        <h1>Select Country :</h1>
+        <h1></h1>
         <form id="example-form">
             <div class="form-item">
                 <input id="country_selector" type="text">
@@ -82,7 +85,7 @@
 
         <!-- Load jQuery from CDN so can run demo immediately -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="build/js/countrySelect.min.js"></script>
+        <script src="build/js/countrySelect.galaxygamejam.js"></script>
         <script>
             $("#country_selector").countrySelect({
                 //defaultCountry: "jp",
