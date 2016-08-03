@@ -294,6 +294,39 @@ footer a {
     .decor img{
       width: 90%;
     }
+	.partner_section {
+	margin-bottom: 6em;
+	text-align: center;
+	}
+
+	.partner_section img {
+	margin: 1em;
+	max-width: 100%;
+	}
+	
+  .logo-big {
+    /* custom width */
+    width:33%;
+	text-align: center;
+}
+  .logo-middle {
+    /* custom width */
+  width:25%;
+	text-align: center;
+	}
+  .logo-small {
+    /* custom width */
+  width:20%;
+	text-align: center;
+	}
+  .logo-row {
+    /* custom width */
+  width:100%;
+	text-align: center;
+	}
+	.logo-row img{
+		margin: 1em;
+	}
 }
 
 @media only screen and (min-width:545px)  and (max-width: 991px){
@@ -306,6 +339,39 @@ footer a {
     .intext_logo img{
       width: 40%;
     }
+	.partner_section {
+	margin-bottom: 6em;
+	text-align: center;
+	}
+
+	.partner_section img {
+	margin: 1em;
+	max-width: 100%;
+	}
+	
+  .logo-big {
+    /* custom width */
+    width:33%;
+	text-align: center;
+}
+  .logo-middle {
+    /* custom width */
+  width:25%;
+	text-align: center;
+	}
+  .logo-small {
+    /* custom width */
+  width:20%;
+	text-align: center;
+	}
+  .logo-row {
+    /* custom width */
+  width:100%;
+	text-align: center;
+	}
+	.logo-row img{
+		margin: 1em;
+	}
 }
 
 @media only screen and (min-width:360px)  and (max-width: 544px){
@@ -317,6 +383,44 @@ footer a {
     }
     .intext_logo img{
       width: 50%;
+    }
+    .logos div{
+	  width: 100%;
+    }
+	
+	.partner_section {
+	  margin-bottom: 6em;
+	  text-align: center;
+	}
+
+	.partner_section img {
+	  margin-left: 0.5em;
+	  margin-right: 0.5em;
+	  margin-top: 1em;
+	  margin-bottom: 1em;
+	  max-width: 100%;
+	}
+	
+    .logo-big {
+    /* custom width */
+      width:95%;
+	  text-align: center;
+    }
+    .logo-middle {
+    /* custom width */
+      width:45%;
+	  text-align: center;
+    }
+    .logo-small {
+    /* custom width */
+      width:30%;
+	  text-align: center;
+    }
+
+    .logo-row {
+    /* custom width */
+	  text-align: center;
+      width:50%;
     }
 }
 
@@ -330,6 +434,44 @@ footer a {
     }
     .intext_logo img{
       width: 70%;
+    }
+    .logos div{
+	  width: 100%;
+    }
+	
+	.partner_section {
+	  margin-bottom: 6em;
+	  text-align: center;
+	}
+
+	.partner_section img {
+	  margin-left: 0.5em;
+	  margin-right: 0.5em;
+	  margin-top: 1em;
+	  margin-bottom: 1em;
+	  max-width: 100%;
+	}
+	
+    .logo-big {
+    /* custom width */
+      width:95%;
+	  text-align: center;
+    }
+    .logo-middle {
+    /* custom width */
+      width:45%;
+	  text-align: center;
+    }
+    .logo-small {
+    /* custom width */
+      width:30%;
+	  text-align: center;
+    }
+
+    .logo-row {
+    /* custom width */
+	  text-align: center;
+      width:50%;
     }
 }
 
@@ -362,4 +504,42 @@ footer a {
     .block b{
       font-size: 10pt;
     }
+    .logos div{
+	  width: 100%;
+    }
+	
+	.partner_section {
+	  margin-bottom: 6em;
+	  text-align: center;
+	}
+
+	.partner_section img {
+	  margin-left: 0.5em;
+	  margin-right: 0.5em;
+	  margin-top: 1em;
+	  margin-bottom: 1em;
+	  max-width: 100%;
+	}
+	
+    .logo-big {
+    /* custom width */
+      width:95%;
+	  text-align: center;
+    }
+    .logo-middle {
+    /* custom width */
+      width:45%;
+	  text-align: center;
+    }
+    .logo-small {
+    /* custom width */
+      width:30%;
+	  text-align: center;
+    }
+
+    .logo-row {
+    /* custom width */
+	  text-align: center;
+      width:50%;
+   }
 }
