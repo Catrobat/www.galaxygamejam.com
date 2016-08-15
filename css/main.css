@@ -284,7 +284,7 @@ footer a {
 
 
 
-@media only screen and (min-width:992px)  and (max-width: 1566px){
+@media only screen and (min-width:992px){
     #top_image_bg {
         min-height: 564px;
     }
