@@ -39,20 +39,22 @@
        case "AT":
 	 window.location = "http://www.galaxygamejam.com/main_at.html";
 	 break;
-       case "IT":
+       case	"IT":
 	 window.location = "http://www.galaxygamejam.com/main_en.html";
 	 break;
-       case "TH":
+       case	"TH":
 	 window.location = "http://www.galaxygamejam.com/main_en.html";
 	 break;
-       case "DE":
-	 window.location = "http://www.galaxygamejam.com/main_en.html";
+       case	"DE":
+	 window.location = "http://www.galaxygamejam.com/main_at.html";
 	 break;
        case	"UK":
 	 window.location = "http://www.galaxygamejam.com/main_en.html";
 	 break;
-       case	"problem_accelerator_google_US":
-	 window.location = "http://www.galaxygamejam.com/main_en.html";
+       case	"US":
+	if (geoplugin_city() != 'Mountain Viex') { 	// Mountain View address can be due to Google Chrome web optimization, so it might not be right.
+		window.location = "http://www.galaxygamejam.com/main_en.html";
+	 }
 	 break;
        case	"IN":
 	 window.location = "http://www.galaxygamejam.com/main_en.html";
@@ -96,7 +98,7 @@
             $("#country_selector").countrySelect({
                 //defaultCountry: "jp",
                 //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-                preferredCountries: ['at','us']
+                preferredCountries: ['at']
             });
 
             var countryData = $("#country").countrySelect("getSelectedCountryData");
