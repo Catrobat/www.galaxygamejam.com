@@ -108,6 +108,30 @@ footer a {
     border-color: #FFFCF4;
     background-color: #FFFCF4;
 }
+
+.language-icon {
+    background: url('../img/globe-w.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	width: 18px;
+	height: 18px;
+}
+
+.language-icon:hover {
+    background: url('../img/globe-y.png');	
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+}
+
+
+
 .block {
     padding: 4em 0;
     width: 100%;
@@ -274,6 +298,20 @@ footer a {
     .decor img{
       display: none;
     }
+	
+	.language-icon {
+	position: relative;
+	margin: 0.5em;
+	left: 95%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.language-icon {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	}
 }
 
 @media only screen and (max-width: 328px) {
