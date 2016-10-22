@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="it">
 
 <head>
     <meta charset="utf-8">
@@ -8,15 +8,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="../img/favicon.png">
 
     <title>Galaxy Game Jam</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
@@ -26,8 +26,27 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
+
 	<script>
+	
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("navbar").innerHTML = this.responseText;
+		}
+	};
+	xhttp.open("GET", "navigation.html", true);
+	xhttp.send();
+	
+	var xhttpFooter = new XMLHttpRequest();
+	xhttpFooter.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("footer").innerHTML = this.responseText;
+		}
+	};
+	xhttpFooter.open("GET", "footer.html", true);
+	xhttpFooter.send();
+	
 		function displaySuscribe(){
 			if(document.getElementById('hidden_suscribe').style.display=='block') {
 				document.getElementById('hidden_suscribe').style.display='none';
@@ -35,8 +54,8 @@
 				document.getElementById('hidden_suscribe').style.display='block';
 			}
 		}
-	</script>	
-	
+	</script>
+
 </head>
 
 <body>
@@ -45,33 +64,27 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Menu navigazione</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" /></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav nav-galaxy">
-                    <li><a href="main_at.html#about">Überblick</a></li>
-                    <li><a href="main_at.html#event">Event</a></li>
-                    <li><a href="main_at.html#participate">Teilnehmen</a></li>
-                    <li><a href="howto_class_at.html">Klassennanmeldung</a></li>
-                    <li><a href="graphics_at.html">Grafiken</a></li>
-                    <li><a href="faq_at.html">FAQs</a></li>
-                   <!--<li><a>Wall of Fame</a></li>-->
-                    <li><a href="javascript:void(0)" onClick="displaySuscribe();">Newsletter</a></li>
-                </ul>
-				<a href="index.html?select=true"><div class="language-icon"></div></a>
+			<!-- FOR TRANSLATION: Keep this Navigation Version as Backup -> please translate the file navigation.html which will overwrite this Navigation -->
+				<ul class="nav nav-galaxy">
+					<li><a href="main.html#about">Home</a></li>
+				</ul>
+				<a href="../index.html?select=true"><div class="language-icon"></div></a>
             </div>
 		<div id="hidden_suscribe">
-			<div id="hidden_subs-title">Abonniere den Pocket Code Newsletter</div>
+			<div id="hidden_subs-title">Sottoscrivi la newsletter di Pocket Code</div>
 
         <div id="hidden_subs-form">
             <form action="//catrobat.us11.list-manage.com/subscribe/post?u=5b5a960a1f0b53cf06ac2b5a2&amp;id=ce7367db20"  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <input type="email" value="" name="EMAIL" class="required form-control email InputEmail" id="mce-EMAIL" placeholder="Gib hier deine E-Mailadresse ein">
-                    <input type="submit" value="Abschicken" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default email-btn">
+                    <input type="email" value="" name="EMAIL" class="required form-control email InputEmail" id="mce-EMAIL" placeholder="Inseisci la tua E-Mail">
+                    <input type="submit" value="Sottoscrivi" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default email-btn">
                     <div id="mce-responses" class="clear">
                         <div class="response" id="mce-error-response" style="display:none"></div>
                         <div class="response" id="mce-success-response" style="display:none"></div>
@@ -85,46 +98,63 @@
         </p>
       </div>
     </nav>
+    </nav>
 
     <div class="block block-blue_bg">
         <div class="container">
             <!-- Main component for a primary marketing message or call to action -->
             <div class="row" height="100%">
-				<div class="col-md-3">
-				<img src="img/characters/planet.png">
-				</div>
-                <div class="col-md-6">
-                    <h1><a id="about">Kontakt</a></h1>
-					<p><a href="mailto:contact@catrobat.org">contact@catrobat.org</a></p>
-					
-					
-					<p>International Catrobat Association<br/>
-						c/o Institut für Softwaretechnologie<br/>
-						Technische Universität Graz<br/>
-						Inffeldgasse 16B/II, 8010 Graz<br/>
-						Österreich<br/>
+                <div class="col-md-8">
+                    <h1><a id="about">Come posso partecipare con la mia scuola?</a></h1>
+
+
+					<p>Ci piacerebbe che anche tu colga l'opportunit&agrave; di prendere parte, gratuitamente, a questo evento e dare la possibilit&agrave; ad ogni tuo studente di concorrere per la vincita di premi, cos&igrave; pure come li possono vincere i docenti!<p/>
+					Se sei un docente, segui questi passi:<br/>
+					<ul>
+					<li>Registra la classe partecipante riempiendo il <a target="_blank" href="groups.html">modulo di registrazione</a>.</li>
+					<li>Durante la registrazione, potrai anche richiedere, gratuitamente, dei poster dell'evento.</li>
+					<li>Finita la registrazione riceverai, via e-mail, una notifica con un ID che identifica univocamente la classe.</li>
+					<li>I tuoi studenti potranno crare i loro programmi sia da soli che in team di al pi&ugrave; tre studenti. Per poter partecipare all'estrazione dei premi (previsti solo in alcune nazioni) almeno 10 studenti della tua classe dovranno inviare il loro programma. Ti preghiamo di leggere con attenzione le regole generali presenti in <a target="_blank" href="../index.html">home page</a>.</li>
+					<li>Tutti i giochi completati dovranno essere inviati dagli studenti come descritto in tale pagina.</li>
+					<li>Importante: durante la sottomissione dei programmi, gli studenti dovranno selezionare l'opzione "school class" nel modulo di registrazione.</li>
+					<li>Ci sar&agrave; un passaggio successivo dove dovranno inserire l'ID univoco della classe, che hai ricevuto dopo la registrazione della classe, nel campo "Class ID".</li>
+					<li>Tutti i vincitori saranno avvisati via E-Mail alla fine del game jam, nel gennaio del 2017.</li>
+					</ul>
+					</p>
+          <br>
+          <p>
+            <div style="text-align: center"><a target="_blank" href="groups.html"><img src="img/registration.png" id="registration-btn"></a></div>
+          </p>
+          <br>
+					<p>
+					Per qualsiasi domanda, contattaci al nostro indirizzo di <a href="mailto:contact@catrobat.org">e-mail</a>. Saremo lieti di risponderti e fornirti ulteriori informazioni!
+					</p>
+					<p>
+					In bocca al lupo per la partecipazione al Galaxy Game Jam!
 					</p>
 				</div>
-                
+
+				<div class="col-md-4">
+					<img src="../img/characters/panda.png">
+				</div>
+
             </div>
         </div>
         <!-- /container -->
     </div>
 
-	
-	 <footer>
+    <footer id="footer">
 		 <div class="container">
 		 <div class="footer_social">
-         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="img/social/facebook.png" class="social"></a>
-		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="img/social/twitter.png" class="social"></a>
-		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="img/social/google.png" class="social"></a>
+         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="../img/social/facebook.png" class="social"></a>
+		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="../img/social/twitter.png" class="social"></a>
+		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="../img/social/google.png" class="social"></a>
 		 </div>
-		 <a href="imprint_at.html">Impressum, Datenschutz &amp; Rechtliches</a> | 
-		 <a href="contact_at.html">Kontakt</a> | 
+		 <a href="imprint.html">Imprint, Privacy &amp; Note Legali</a> |
+		 <a href="contact.html">Contatti</a> |
 		 <a target="_blank" href="http://www.catrobat.org/">©&nbsp;2016 Catrobat</a>
 		 </div>
     </footer>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

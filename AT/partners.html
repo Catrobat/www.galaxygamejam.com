@@ -8,15 +8,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="../img/favicon.png">
 
     <title>Galaxy Game Jam</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
@@ -28,6 +28,25 @@
     <![endif]-->
 
 	<script>
+	
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("navbar").innerHTML = this.responseText;
+		}
+	};
+	xhttp.open("GET", "navigation.html", true);
+	xhttp.send();
+	
+	var xhttpFooter = new XMLHttpRequest();
+	xhttpFooter.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("footer").innerHTML = this.responseText;
+		}
+	};
+	xhttpFooter.open("GET", "footer.html", true);
+	xhttpFooter.send();
+	
 		function displaySuscribe(){
 			if(document.getElementById('hidden_suscribe').style.display=='block') {
 				document.getElementById('hidden_suscribe').style.display='none';
@@ -50,20 +69,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" /></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav nav-galaxy">
-                    <li><a href="main_at.html#about">Überblick</a></li>
-                    <li><a href="main_at.html#event">Event</a></li>
-                    <li><a href="main_at.html#participate">Teilnehmen</a></li>
-                    <li><a href="howto_class_at.html">Klassennanmeldung</a></li>
-                    <li><a href="graphics_at.html">Grafiken</a></li>
-                    <li><a href="faq_at.html">FAQs</a></li>
-                   <!--<li><a>Wall of Fame</a></li>-->
-                    <li><a href="javascript:void(0)" onClick="displaySuscribe();">Newsletter</a></li>
-                </ul>
-				<a href="index.html?select=true"><div class="language-icon"></div></a>
+			<!-- FOR TRANSLATION: Keep this Navigation Version as Backup -> please translate the file navigation.html which will overwrite this Navigation -->
+				<ul class="nav nav-galaxy">
+					<li><a href="main.html#about">Home</a></li>
+				</ul>
+				<a href="../index.html?select=true"><div class="language-icon"></div></a>
             </div>
 		<div id="hidden_suscribe">
 			<div id="hidden_subs-title">Abonniere den Pocket Code Newsletter</div>
@@ -94,48 +107,49 @@
                     <h1><a id="about">Partners</a></h1>
 				</div>
           <div class="row row-centered partner_section">
-          <div class="col-centered logo-big"><a href="http://catrobat.org" target="_blank"><img src="img/logo/catrobat.png"/></a></div>
-          <div class="col-centered logo-big"><a href="http://www.scratchfoundation.org/" target="_blank"><img src="img/logo/scratch.png"/></a></div>
-          <div class="col-centered logo-big"><a href="http://snap.berkeley.edu/" target="_blank"><img src="img/logo/snap.png"/></a></div> 
-		  <div class="col-centered logo-big"><a href="http://www.samsung.com/at/microsite/digitale-bildung/coding-for-kids.html" target="_blank"><img src="img/logo/samsung-logo.png"/></a></div>
-          <div class="col-centered logo-big"><a href="http://no1leftbehind.eu" target="_blank"><img src="img/logo/NOLB.png"/></a></div>
-          <div class="col-centered logo-big"><a href="http://www.robotixedu.com/" target="_blank"><img src="img/logo/phiro.png"/></a></div>    	  
+          <div class="col-centered logo-big"><a href="http://catrobat.org" target="_blank"><img src="../img/logo/catrobat.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://www.scratchfoundation.org/" target="_blank"><img src="../img/logo/scratch.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://snap.berkeley.edu/" target="_blank"><img src="../img/logo/snap.png"/></a></div> 
+		  <div class="col-centered logo-big"><a href="http://www.samsung.com/at/microsite/digitale-bildung/coding-for-kids.html" target="_blank"><img src="../img/logo/samsung-logo.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://no1leftbehind.eu" target="_blank"><img src="../img/logo/NOLB.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://www.robotixedu.com/" target="_blank"><img src="../img/logo/phiro.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://www.google.com/" target="_blank"><img src="../img/logo/google.png"/></a></div>    	    	  
 	  </div>
 	  
 	  <div class="row decor">
         <div class="col-md-12 graphic">
           <div class="separator">
-            <img src="img/dots.png"/>
+            <img src="../img/dots.png"/>
           </div>
         </div>
       </div>  
 	  
 	  <div class="row partner_section">
-          <div class="col-centered logo-middle"><a href="http://www.tugraz.at" target="_blank"><img src="img/logo/TUG.png"/></a></div>
+          <div class="col-centered logo-middle"><a href="http://www.tugraz.at" target="_blank"><img src="../img/logo/TUG.png"/></a></div>
       </div>
 	
 	  <div class="row decor">
         <div class="col-md-12 graphic">
           <div class="separator">
-            <img src="img/dots.png"/>
+            <img src="../img/dots.png"/>
           </div>
         </div>
       </div>  
-	  
+	  <!--
 	  <div class="row partner_section">
-			<div class="col-centered logo-middle"><a href="http://www.allyouneediscode.eu" target="_blank"><img src="img/logo/aynic.png"/></a></div>
-			<div class="col-centered logo-middle"><a href="http://www.openeducationeuropa.eu" target="_blank"><img src="img/logo/oee.png"/></a></div>
+			<div class="col-centered logo-middle"><a href="http://www.allyouneediscode.eu" target="_blank"><img src="../img/logo/aynic.png"/></a></div>
       </div>		
 			  <div class="row decor">
         <div class="col-md-12 graphic">
           <div class="separator">
-            <img src="img/dots.png"/>
+            <img src="../img/dots.png"/>
           </div>
         </div>
-      </div>  
+      </div>
+	  -->
 	  
 	  <div class="row partner_section">
-      <div class="col-centered logo-row"><a href="https://ec.europa.eu/programmes/horizon2020/" target="_blank"><img src="img/logo/horizon2020.png"/></a><p>Co-funded by the Horizon 2020 Framework Programme of the European Union.</p></div>
+      <div class="col-centered logo-row"><a href="https://ec.europa.eu/programmes/horizon2020/" target="_blank"><img src="../img/logo/horizon2020.png"/></a><p>Co-funded by the Horizon 2020 Framework Programme of the European Union.</p></div>
     </div>
             </div>
         </div>
@@ -143,15 +157,16 @@
     </div>
 
 
-	 <footer>
+	 <footer id="footer">
+	 <!-- FOR TRANSLATION: Keep this Footer Version as Backup -> please translate the file footer.html which will overwrite this footer -->
 		 <div class="container">
 		 <div class="footer_social">
-         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="img/social/facebook.png" class="social"></a>
-		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="img/social/twitter.png" class="social"></a>
-		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="img/social/google.png" class="social"></a>
+         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="../img/social/facebook.png" class="social"></a>
+		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="../img/social/twitter.png" class="social"></a>
+		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="../img/social/google.png" class="social"></a>
 		 </div>
-		 <a href="imprint_at.html">Impressum, Datenschutz &amp; Rechtliches</a> |
-		 <a href="contact_at.html">Kontakt</a> |
+		 <a href="imprint.html">Impressum, Datenschutz &amp; Rechtliches</a> |
+		 <a href="contact.html">Kontact</a> |
 		 <a target="_blank" href="http://www.catrobat.org/">©&nbsp;2016 Catrobat</a>
 		 </div>
     </footer>

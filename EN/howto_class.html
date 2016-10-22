@@ -8,15 +8,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="../img/favicon.png">
 
     <title>Galaxy Game Jam</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
@@ -28,6 +28,26 @@
     <![endif]-->
 
 	<script>
+	
+	
+	var xhttpNav = new XMLHttpRequest();
+	xhttpNav.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("navbar").innerHTML = this.responseText;
+		}
+	};
+	xhttpNav.open("GET", "navigation.html", true);
+	xhttpNav.send();
+	
+	var xhttpFooter = new XMLHttpRequest();
+	xhttpFooter.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("footer").innerHTML = this.responseText;
+		}
+	};
+	xhttpFooter.open("GET", "footer.html", true);
+	xhttpFooter.send();
+	
 		function displaySuscribe(){
 			if(document.getElementById('hidden_suscribe').style.display=='block') {
 				document.getElementById('hidden_suscribe').style.display='none';
@@ -50,19 +70,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" /></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav nav-galaxy">
-                    <li><a href="main_en.html#about">About</a></li>
-                    <li><a href="main_en.html#event">Event</a></li>
-                    <li><a href="main_en.html#participate">Participate</a></li>
-                    <li><a href="howto_class_en.html">Class Participation</a></li>
-                    <li><a href="graphics_en.html">Graphics</a></li>
-                    <li><a href="faq_en.html">FAQs</a></li>
-                    <li><a href="javascript:void(0)" onClick="displaySuscribe();">Newsletter</a></li>
-                </ul>
-				<a href="index.html?select=true"><div class="language-icon"></div></a>
+			<!-- FOR TRANSLATION: Keep this Navigation Version as Backup -> please translate the file navigation.html which will overwrite this Navigation -->
+				<ul class="nav nav-galaxy">
+					<li><a href="main.html#about">Home</a></li>
+				</ul>
+				<a href="../index.html?select=true"><div class="language-icon"></div></a>
             </div>
 		<div id="hidden_suscribe">
 			<div id="hidden_subs-title">Subscribe to the Pocket Code Newsletter</div>
@@ -86,6 +101,9 @@
     </nav>
     </nav>
 
+<!-- START OF TRANSLATED PART -->	
+
+ 
     <div class="block block-blue_bg">
         <div class="container">
             <!-- Main component for a primary marketing message or call to action -->
@@ -97,10 +115,10 @@
 					<p>We would like to give you the chance to take part in this unique event for free and win great prizes for all participating students as well as the class teacher!<p/>
 					As the class teacher, please follow these steps:<br/>
 					<ul>
-					<li>Register your class by filling out the <a target="_blank" href="groups_en.html">registration form</a>.</li>
+					<li>Register your class by filling out the <a target="_blank" href="groups.html">registration form</a>.</li>
 					<li>During registration, you can choose whether you want to receive free Galaxy Game Jam posters from us.</li>
 					<li>After filling out the registration, you will receive a notification with a unique class ID by email.</li>
-					<li>Your students can create their programs individually or in teams of up to three students. In order to be eligible for the special prizes available for teachers in selected countries, at least 10 students of your class must participate. Please note the general rules on the <a target="_blank" href="index.html">home page</a>.</li>
+					<li>Your students can create their programs individually or in teams of up to three students. In order to be eligible for the special prizes available for teachers in selected countries, at least 10 students of your class must participate. Please note the general rules on the <a target="_blank" href="../index.html">home page</a>.</li>
 					<li>The finished games must be submitted by your students as described on the home page.</li>
 					<li>Important: During the submission process, students must select the "school class" option in the registration form.</li>
 					<li>In the next step "Class ID" students must enter the ID that you will receive by E-mail after registering your class.</li>
@@ -109,7 +127,7 @@
 					</p>
           <br>
           <p>
-            <div style="text-align: center"><a target="_blank" href="groups_en.html"><img src="img/button_Registration.png" id="registration-btn"></a></div>
+            <div style="text-align: center"><a target="_blank" href="groups.html"><img src="img/registration.png" id="registration-btn"></a></div>
           </p>
           <br>
 					<p>
@@ -121,23 +139,27 @@
 				</div>
 
 				<div class="col-md-4">
-					<img src="img/characters/panda.png">
+					<img src="../img/characters/panda.png">
 				</div>
 
             </div>
         </div>
         <!-- /container -->
     </div>
+	
+<!-- END OF TRANSLATED PART FOR THIS PAGE - THANKS! -->	
 
-    <footer>
+
+    <footer id="footer">
+	 <!-- FOR TRANSLATION: Keep this Footer Version as Backup -> please translate the file footer.html which will overwrite this footer -->
 		 <div class="container">
 		 <div class="footer_social">
-         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="img/social/facebook.png" class="social"></a>
-		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="img/social/twitter.png" class="social"></a>
-		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="img/social/google.png" class="social"></a>
+         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="../img/social/facebook.png" class="social"></a>
+		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="../img/social/twitter.png" class="social"></a>
+		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="../img/social/google.png" class="social"></a>
 		 </div>
-		 <a href="imprint_en.html">Imprint, Privacy &amp; Legal</a> |
-		 <a href="contact_en.html">Contact</a> |
+		 <a href="imprint.html">Imprint, Privacy &amp; Legal</a> |
+		 <a href="contact.html">Contact</a> |
 		 <a target="_blank" href="http://www.catrobat.org/">©&nbsp;2016 Catrobat</a>
 		 </div>
     </footer>

@@ -8,15 +8,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="../img/favicon.png">
 
     <title>Galaxy Game Jam</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
@@ -28,6 +28,25 @@
     <![endif]-->
 
 	<script>
+	
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("navbar").innerHTML = this.responseText;
+		}
+	};
+	xhttp.open("GET", "navigation.html", true);
+	xhttp.send();
+	
+	var xhttpFooter = new XMLHttpRequest();
+	xhttpFooter.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("footer").innerHTML = this.responseText;
+		}
+	};
+	xhttpFooter.open("GET", "footer.html", true);
+	xhttpFooter.send();
+	
 		function displaySuscribe(){
 			if(document.getElementById('hidden_suscribe').style.display=='block') {
 				document.getElementById('hidden_suscribe').style.display='none';
@@ -50,20 +69,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" /></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav nav-galaxy">
-                    <li><a href="main_at.html#about">Überblick</a></li>
-                    <li><a href="main_at.html#event">Event</a></li>
-                    <li><a href="main_at.html#participate">Teilnehmen</a></li>
-                    <li><a href="howto_class_at.html">Klassennanmeldung</a></li>
-                    <li><a href="graphics_at.html">Grafiken</a></li>
-                    <li><a href="faq_at.html">FAQs</a></li>
-                   <!--<li><a>Wall of Fame</a></li>-->
-                    <li><a href="javascript:void(0)" onClick="displaySuscribe();">Newsletter</a></li>
-                </ul>
-				<a href="index.html?select=true"><div class="language-icon"></div></a>
+			<!-- FOR TRANSLATION: Keep this Navigation Version as Backup -> please translate the file navigation.html which will overwrite this Navigation -->
+				<ul class="nav nav-galaxy">
+					<li><a href="main.html#about">Home</a></li>
+				</ul>
+				<a href="../index.html?select=true"><div class="language-icon"></div></a>
+
             </div>
 		<div id="hidden_suscribe">
 			<div id="hidden_subs-title">Abonniere den Pocket Code Newsletter</div>
@@ -105,40 +119,40 @@
 				</div>
 				<div class="col-md-6">
 				        <div class="poster">
-						<img src="img/assets/elephant.png"/>
+						<img src="../img/assets/elephant.png"/>
 						</div>
 				        <div class="poster">
-						<img src="img/assets/fish.png"/>
+						<img src="../img/assets/fish.png"/>
 						</div>
 				        <div class="poster">
-						<img src="img/assets/lynx.png"/>
+						<img src="../img/assets/lynx.png"/>
 						</div>
 				        <div class="poster">
-						<img src="img/assets/panda.png"/>
+						<img src="../img/assets/panda.png"/>
 						</div>
                          <div class="poster">
-						<img src="img/assets/penguin.png"/>
+						<img src="../img/assets/penguin.png"/>
 						</div>
                         <div class="poster">
-						<img src="img/assets/racoon.png"/>
+						<img src="../img/assets/racoon.png"/>
 						</div>
                         <div class="poster">
-						<img src="img/assets/bg1.png"/>
+						<img src="../img/assets/bg1.png"/>
 						</div>
                         <div class="poster">
-						<img src="img/assets/bg2.png"/>
+						<img src="../img/assets/bg2.png"/>
 						</div>
                         <div class="poster">
-						<img src="img/assets/bg3.png"/>
+						<img src="../img/assets/bg3.png"/>
 						</div>
                         <div class="poster">
-						<img src="img/assets/bg4.png"/>
+						<img src="../img/assets/bg4.png"/>
 						</div>
                         <div class="poster">
-						<img src="img/assets/bg5.png"/>
+						<img src="../img/assets/bg5.png"/>
 						</div>
                         <div class="poster">
-						<img src="img/assets/bg6.png"/>
+						<img src="../img/assets/bg6.png"/>
 						</div>
 				</div>
             </div>
@@ -147,15 +161,16 @@
     </div>
 
 
-	 <footer>
+	 <footer id="footer">
+	 <!-- FOR TRANSLATION: Keep this Footer Version as Backup -> please translate the file footer.html which will overwrite this footer -->
 		 <div class="container">
 		 <div class="footer_social">
-         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="img/social/facebook.png" class="social"></a>
-		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="img/social/twitter.png" class="social"></a>
-		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="img/social/google.png" class="social"></a>
+         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="../img/social/facebook.png" class="social"></a>
+		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="../img/social/twitter.png" class="social"></a>
+		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="../img/social/google.png" class="social"></a>
 		 </div>
-		 <a href="imprint_at.html">Impressum, Datenschutz &amp; Rechtliches</a> |
-		 <a href="contact_at.html">Kontakt</a> |
+		 <a href="imprint.html">Impressum, Datenschutz &amp; Rechtliches</a> |
+		 <a href="contact.html">Kontakt</a> |
 		 <a target="_blank" href="http://www.catrobat.org/">©&nbsp;2016 Catrobat</a>
 		 </div>
     </footer>

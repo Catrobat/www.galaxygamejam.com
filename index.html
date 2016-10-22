@@ -51,36 +51,36 @@
 	  if (force_selection != "true") {
 		 switch (geoplugin_countryCode()) {
 		   case "AT":
-		 window.location = "http://www.galaxygamejam.com/main_at.html";
+		 window.location = "http://www.galaxygamejam.com/AT/main.html";
 		 break;
 		   case	"IT":
-		 window.location = "http://www.galaxygamejam.com/main_it.html";
+		 window.location = "http://www.galaxygamejam.com/IT/main.html";
 		 break;
 		   case	"TH":
-		 window.location = "http://www.galaxygamejam.com/main_en.html";
+		 window.location = "http://www.galaxygamejam.com/EN/main.html";
 		 break;
 		   case	"DE":
-		 window.location = "http://www.galaxygamejam.com/main_at.html";
+		 window.location = "http://www.galaxygamejam.com/AT/main.html";
 		 break;
 		   case	"UK":
-		 window.location = "http://www.galaxygamejam.com/main_en.html";
+		 window.location = "http://www.galaxygamejam.com/EN/main.html";
 		 break;
 		   case	"US":
 		if (geoplugin_city() != 'Mountain View') { 	// Mountain View address can be due to Google Chrome web optimization, so it might not be right.
-			window.location = "http://www.galaxygamejam.com/main_en.html";
+			window.location = "http://www.galaxygamejam.com/EN/main.html";
 		 }
 		 break;
 		   case	"IN":
-		 window.location = "http://www.galaxygamejam.com/main_en.html";
+		 window.location = "http://www.galaxygamejam.com/EN/main.html";
 		 break;
 		   case	"JP":
-		 window.location = "http://www.galaxygamejam.com/main_en.html";
+		 window.location = "http://www.galaxygamejam.com/EN/main.html";
 		 break;
 		   case	"KR":
-		 window.location = "http://www.galaxygamejam.com/main_en.html";
+		 window.location = "http://www.galaxygamejam.com/EN/main.html";
 		 break;
 		   case	"ES":
-		 window.location = "http://www.galaxygamejam.com/main_en.html";
+		 window.location = "http://www.galaxygamejam.com/EN/main.html";
 		 break;
 		}
 	  }
@@ -121,9 +121,9 @@
 
             function selectMain() {
                 var selected_country_code = document.getElementById("country_selector_code").value;
-                if (selected_country_code == 'at') window.open("main_at.html", "_self");
-				else if(selected_country_code == 'it') window.open("main_it.html", "_self");
-                else window.open("main_en.html", "_self");
+                if (selected_country_code == 'at') window.open("AT/main.html", "_self");
+				else if(selected_country_code == 'it') window.open("IT/main.html", "_self");
+                else window.open("EN/main.html", "_self");
             }
         </script>
     <!-- Bootstrap core JavaScript

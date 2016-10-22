@@ -8,15 +8,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="../img/favicon.png">
 
     <title>Galaxy Game Jam</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
@@ -28,6 +28,25 @@
     <![endif]-->
 	
 	<script>
+	
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("navbar").innerHTML = this.responseText;
+		}
+	};
+	xhttp.open("GET", "navigation.html", true);
+	xhttp.send();
+	
+	var xhttpFooter = new XMLHttpRequest();
+	xhttpFooter.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("footer").innerHTML = this.responseText;
+		}
+	};
+	xhttpFooter.open("GET", "footer.html", true);
+	xhttpFooter.send();
+	
 		function displaySuscribe(){
 			if(document.getElementById('hidden_suscribe').style.display=='block') {
 				document.getElementById('hidden_suscribe').style.display='none';
@@ -50,19 +69,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" /></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav nav-galaxy">
-                    <li><a href="main_it.html#about">Informazioni</a></li>
-                    <li><a href="main_it.html#event">Evento</a></li>
-                    <li><a href="main_it.html#participate">Participa</a></li>
-                    <li><a href="howto_class_it.html">Participa con la classe</a></li>
-                    <li><a href="graphics_it.html">Elementi grafici</a></li>
-                    <li><a href="faq_it.html">FAQ</a></li>
-                    <li><a href="javascript:void(0)" onClick="displaySuscribe();">Newsletter</a></li>
-                </ul>
-				<a href="index.html?select=true"><div class="language-icon"></div></a>
+			<!-- FOR TRANSLATION: Keep this Navigation Version as Backup -> please translate the file navigation.html which will overwrite this Navigation -->
+				<ul class="nav nav-galaxy">
+					<li><a href="main.html#about">Home</a></li>
+				</ul>
+				<a href="../index.html?select=true"><div class="language-icon"></div></a>
             </div>
 		<div id="hidden_suscribe">
 			<div id="hidden_subs-title">Sottoscrivi alla newsletter di Pocket Code</div>
@@ -112,7 +126,7 @@
         </div>
 		        <div class="col-md-4 decor">
           <div class="graphic">
-          <img width="250" src="img/characters/lynx.png"/>
+          <img width="250" src="../img/characters/lynx.png"/>
           </div>
         </div>
 
@@ -139,10 +153,10 @@
 		  <p>Puo trovare maggiori dettagli alla pagina <a target="_blank" href="http://developer.catrobat.org/licenses_of_uploaded_catrobat_programs">"Licenze dei programmi Catrobat inviati"</a>.</p>
 	 
           <h2><a id="faq7">Quali vincoli ci sono per partecipare al Game Jam?</a></h2>
-          <p>Segui le istruzioni presenti sull <a href="index.html">pagina principale</a>. Solo questo!</p>
+          <p>Segui le istruzioni presenti sull <a href="../index.html">pagina principale</a>. Solo questo!</p>
 	  
           <h2><a id="faq8">Come posso inviare il mio progetto?</a></h2>
-		  <p>La sottomissione di un programma avviene facendo il suo upload da dentro Pocket Code. Fatto questo apri i dettagli dell'app inviata usando il tasto "Esplora" da dentro Pocket Code e fai clic sul pulsante di sottomissione al Galaxy Game Jam che si trova nella pagina di dettagli, sotto la descrizione. Andando su "Il mio profilo", si apre una pagina all'interno dell'area "Esplora" (premi sull'icona del tuo avatar, presente in alto a destra) e poi, scorrendo in basso la pagina, troverai tutti i tuoi programmi (fai attenzione a non eliminare accidentalmente uno di essi premendo sulla "x" vicina all'icona del programma). Ti invitiamo a leggere i dettagli sulle norme che regolano la privacy e le condizioni di partecipazione, presenti sia sul modulo di sottomissione sia in  <a href="imprint_it.html">questa</a> pagina.</p>
+		  <p>La sottomissione di un programma avviene facendo il suo upload da dentro Pocket Code. Fatto questo apri i dettagli dell'app inviata usando il tasto "Esplora" da dentro Pocket Code e fai clic sul pulsante di sottomissione al Galaxy Game Jam che si trova nella pagina di dettagli, sotto la descrizione. Andando su "Il mio profilo", si apre una pagina all'interno dell'area "Esplora" (premi sull'icona del tuo avatar, presente in alto a destra) e poi, scorrendo in basso la pagina, troverai tutti i tuoi programmi (fai attenzione a non eliminare accidentalmente uno di essi premendo sulla "x" vicina all'icona del programma). Ti invitiamo a leggere i dettagli sulle norme che regolano la privacy e le condizioni di partecipazione, presenti sia sul modulo di sottomissione sia in  <a href="imprint.html">questa</a> pagina.</p>
           <p>Ricordati anche di mettere, dentro la descrizione del tuo progetto, il tag #GalaxyGameJam. Qualunque modifica al programma pu&ograve; essere fatta e inviata semplicemente rifacendo il suo upload durante lo svolgimento dell'evento!</p>
 	
           <h2><a id="faq9">Cosa accade una volta inviato il programma?</a></h2>
@@ -156,14 +170,14 @@
 	  
           <h2><a id="faq12">Posso ricevere ulteriori materiali su questo Galaxy Game Jam?</a></h2>
           <p>Tutti gli aggiornamenti del Galaxy Game Jam saranno pubblicati sui canali ufficiali di Pocket Code dei diversi Social network. Inoltre saranno inviati, con cadenza regolare, aggiornamenti attraverso la newsletter di Pocket Code.</p>
-		  <p>Se la tua scuola o il tuo club di programmazione vuole dei poster dell'evento, dai un'occhiata alla pagina <a href="groups_it.html">Partecipazione di gruppi</a> o mettiti direttamente in contatto con noi!</p>
+		  <p>Se la tua scuola o il tuo club di programmazione vuole dei poster dell'evento, dai un'occhiata alla pagina <a href="groups.html">Partecipazione di gruppi</a> o mettiti direttamente in contatto con noi!</p>
 	  	  	  
           <h2><a id="faq13">Come posso contribuire al progetto?</a></h2>	 
 		  <p>Al fine di rendere l'evento il pi&ugrave; posibile conosciuto, ti invitiamo condividerlo con i tuoi contatti: amici, famiglia e social network.</p>
 		  <p>Se invece vuoi partecipare ancora pi&ugrave; attivamente, per esempio aiutandoci a tradurre le diverse pagine web, l'app o i poster, per cortesia invia una mail al nostro <a href="mailto:contact@catrobat.org">indirizzo di posta</a>!</p>
 		  
           <h2><a id="faq14">Posso partecipare con la mia scuola o con la mia classe?</a></h2>	 
-		  <p>Siamo molto felici di sapere che sei interessato a partecipare al nostro Galaxy Game Jam con la tua scuola o classe! In alcune nazioni, sono prevsti dei primi anche per i docenti le cui classi partecipano al progetto. Puoi trovare tutte le informazioni in <a href="howto_class_it.html">questa pagina!</a></p>
+		  <p>Siamo molto felici di sapere che sei interessato a partecipare al nostro Galaxy Game Jam con la tua scuola o classe! In alcune nazioni, sono prevsti dei primi anche per i docenti le cui classi partecipano al progetto. Puoi trovare tutte le informazioni in <a href="howto_class.html">questa pagina!</a></p>
             </div>
         </div>
         <!-- /container -->
@@ -171,15 +185,15 @@
 	</div>
 
 	
-	 <footer>
+	 <footer id="footer">
 		 <div class="container">
 		 <div class="footer_social">
-         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="img/social/facebook.png" class="social"></a>
-		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="img/social/twitter.png" class="social"></a>
-		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="img/social/google.png" class="social"></a>
+         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="../img/social/facebook.png" class="social"></a>
+		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="../img/social/twitter.png" class="social"></a>
+		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="../img/social/google.png" class="social"></a>
 		 </div>
-		 <a href="imprint_it.html">Imprint, Privacy &amp; Note Legali</a> | 
-		 <a href="contact_it.html">Contatti</a> | 
+		 <a href="imprint.html">Imprint, Privacy &amp; Note Legali</a> | 
+		 <a href="contact.html">Contatti</a> | 
 		 <a target="_blank" href="http://www.catrobat.org/">©&nbsp;2016 Catrobat</a>
 		 </div>
     </footer>

@@ -8,15 +8,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="../img/favicon.png">
 
     <title>Galaxy Game Jam</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
@@ -28,6 +28,25 @@
     <![endif]-->
 
 	<script>
+	
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("navbar").innerHTML = this.responseText;
+		}
+	};
+	xhttp.open("GET", "navigation.html", true);
+	xhttp.send();
+	
+	var xhttpFooter = new XMLHttpRequest();
+	xhttpFooter.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("footer").innerHTML = this.responseText;
+		}
+	};
+	xhttpFooter.open("GET", "footer.html", true);
+	xhttpFooter.send();
+	
 		function displaySuscribe(){
 			if(document.getElementById('hidden_suscribe').style.display=='block') {
 				document.getElementById('hidden_suscribe').style.display='none';
@@ -50,23 +69,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" /></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav nav-galaxy">
-                    <li><a href="main_at.html#about">Überblick</a></li>
-                    <li><a href="main_at.html#event">Event</a></li>
-                    <li><a href="main_at.html#participate">Teilnehmen</a></li>
-                    <li><a href="howto_class_at.html">Klassennanmeldung</a></li>
-                    <li><a href="graphics_at.html">Grafiken</a></li>
-                    <li><a href="faq_at.html">FAQs</a></li>
-                   <!--<li><a>Wall of Fame</a></li>-->
-                    <li><a href="javascript:void(0)" onClick="displaySuscribe();">Newsletter</a></li>
-                </ul>
-				<a href="index.html?select=true"><div class="language-icon"></div></a>
+			<!-- FOR TRANSLATION: Keep this Navigation Version as Backup -> please translate the file navigation.html which will overwrite this Navigation -->
+				<ul class="nav nav-galaxy">
+					<li><a href="main.html#about">Home</a></li>
+				</ul>
+				<a href="../index.html?select=true"><div class="language-icon"></div></a>
             </div>
 		<div id="hidden_suscribe">
-			<div id="hidden_subs-title">Abonniere den Pocket Code Newsletter</div>
+<!-- Please translate the Newsletter Text -->
+			<div id="hidden_subs-title">Sottoscivi la Newsletter di Pocket Code</div>
 
         <div id="hidden_subs-form">
             <form action="//catrobat.us11.list-manage.com/subscribe/post?u=5b5a960a1f0b53cf06ac2b5a2&amp;id=ce7367db20"  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -86,59 +100,77 @@
       </div>
     </nav>
 
+<!-- START OF TRANSLATED PART -->	
+
+ 
     <div class="block block-blue_bg">
         <div class="container">
             <!-- Main component for a primary marketing message or call to action -->
             <div class="row" height="100%">
-                <div class="col-md-8">
-                    <h1><a id="about">Wie nehmen wir als Klasse beim Galaxy Game Jam teil?</a></h1>
-
-
-					<p>Gerne geben wir euch auch als Klasse die Chance, bei dieser einzigartigen Veranstaltung kostenlos teilzunehmen und tolle Preise für alle teilnehmenden Schüler und Schülerinnen und für den Lehrer oder die Lehrerin zu gewinnen!<p/>
-					Um teilzunehmen folgen Sie als Lehrer oder Lehrerin der Klasse bitte den folgenden Schritten:<br/>
-					<ul>
-					<li>Registrieren Sie sich als Lehrer oder Lehrerin indem Sie das <a target="_blank" href="groups_at.html">Anmeldeformular</a> ausfüllen.</li>
-					<li>Während der Anmeldung können Sie auswählen, ob Sie von uns kostenlose Galaxy Game Jam Plakate für Ihre Schule beziehen möchten.</li>
-					<li>Nach dem Ausfüllen der Anmeldung erhalten Sie per E-Mail eine Benachrichtigung mit einer einmaligen Klassen-ID.</li>
-					<li>Ihre Schüler und Schülerinnen erstellen in Teams von bis zu 3 Personen ihre eigenen Spiele. Um einen der Sonderpreise für LehrerInnen in ausgewählten Ländern gewinnen zu können, müssen mindestens 10 Schüler Ihrer Klasse teilnehmen. Bitte beachten Sie auch die allgemeinen Regeln auf der <a target="_blank" href="main_at.html">Startseite</a>.</li>
-					<li>Die fertigen Spiele müssen dann wie auf der Startseite erklärt von Ihren Schülern und Schülerinnen eingereicht werden.</li>
-					<li>Wichtig: Während des Abgabeprozesses müssen die Schüler und Schülerinnen bei der Frage "Wie hast du teilgenommen?" die Option "Als Schulklasse" auswählen.</li>
-					<li>Anschließend müssen die Schüler und Schülerinnen im nächsten Schritt bei "Klassen-Identifikation" die ID eingeben, die Sie per Mail erhalten haben.</li>
-					<li>Alle Gewinner werden nach dem Ende des Game Jams im Jänner 2017 per E-Mail benachrichtigt.</li>
-					</ul>
-					</p>
-          <br>
-          <p>
-            <div style="text-align: center"><a target="_blank" href="groups_at.html"><img src="img/button_zurAnmeldung.png" id="anmeldung-btn"></a></div>
-          </p>
-          <br>
-					<p>
-					Falls Sie weitere Fragen haben, treten Sie bitte einfach via <a href="mailto:contact@catrobat.org">Mail</a> mit uns in Kontakt. Wir würden uns freuen Ihre Fragen beantworten zu können!
-					</p>
-					<p>
-					Viel Glück bei der Teilnahme am Galaxy Game Jam!
-					</p>
+                <div class="col-md-12">
+                    <h1><a id="about">Partners</a></h1>
 				</div>
-
-				<div class="col-md-4">
-					<img src="img/characters/panda.png">
-				</div>
-
+          <div class="row row-centered partner_section">
+          <div class="col-centered logo-big"><a href="http://catrobat.org" target="_blank"><img src="../img/logo/catrobat.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://www.scratchfoundation.org/" target="_blank"><img src="../img/logo/scratch.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://snap.berkeley.edu/" target="_blank"><img src="../img/logo/snap.png"/></a></div> 
+		  <div class="col-centered logo-big"><a href="http://www.samsung.com/at/microsite/digitale-bildung/coding-for-kids.html" target="_blank"><img src="../img/logo/samsung-logo.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://no1leftbehind.eu" target="_blank"><img src="../img/logo/NOLB.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://www.robotixedu.com/" target="_blank"><img src="../img/logo/phiro.png"/></a></div>
+          <div class="col-centered logo-big"><a href="http://www.google.com/" target="_blank"><img src="../img/logo/google.png"/></a></div>    	    	  
+	  </div>
+	  
+	  <div class="row decor">
+        <div class="col-md-12 graphic">
+          <div class="separator">
+            <img src="../img/dots.png"/>
+          </div>
+        </div>
+      </div>  
+	  
+	  <div class="row partner_section">
+          <div class="col-centered logo-middle"><a href="http://www.tugraz.at" target="_blank"><img src="../img/logo/TUG.png"/></a></div>
+      </div>
+	
+	  <div class="row decor">
+        <div class="col-md-12 graphic">
+          <div class="separator">
+            <img src="../img/dots.png"/>
+          </div>
+        </div>
+      </div>  
+	  <!--
+	  <div class="row partner_section">
+			<div class="col-centered logo-middle"><a href="http://www.allyouneediscode.eu" target="_blank"><img src="../img/logo/aynic.png"/></a></div>
+      </div>		
+			  <div class="row decor">
+        <div class="col-md-12 graphic">
+          <div class="separator">
+            <img src="../img/dots.png"/>
+          </div>
+        </div>
+      </div>
+	  -->
+	  
+	  <div class="row partner_section">
+      <div class="col-centered logo-row"><a href="https://ec.europa.eu/programmes/horizon2020/" target="_blank"><img src="../img/logo/horizon2020.png"/></a><p>Co-funded by the Horizon 2020 Framework Programme of the European Union.</p></div>
+    </div>
             </div>
         </div>
         <!-- /container -->
     </div>
 
 
-	 <footer>
+	 <footer id="footer">
+	 <!-- FOR TRANSLATION: Keep this Footer Version as Backup -> please translate the file footer.html which will overwrite this footer -->
 		 <div class="container">
 		 <div class="footer_social">
-         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="img/social/facebook.png" class="social"></a>
-		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="img/social/twitter.png" class="social"></a>
-		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="img/social/google.png" class="social"></a>
+         <a target="_blank" href="https://www.facebook.com/CatrobatPocketCode/"><img src="../img/social/facebook.png" class="social"></a>
+		 <a target="_blank" href="https://twitter.com/pocket_code"><img src="../img/social/twitter.png" class="social"></a>
+		 <a target="_blank" href="https://plus.google.com/communities/116816272940643231129"><img src="../img/social/google.png" class="social"></a>
 		 </div>
-		 <a href="imprint_at.html">Impressum, Datenschutz &amp; Rechtliches</a> |
-		 <a href="contact_at.html">Kontakt</a> |
+		 <a href="imprint.html">Imprint, Privacy &amp; Legal</a> | 
+		 <a href="contact.html">Contact</a> | 
 		 <a target="_blank" href="http://www.catrobat.org/">©&nbsp;2016 Catrobat</a>
 		 </div>
     </footer>
